@@ -2,7 +2,7 @@
 //  VSLCallStats.h
 //  Copyright © 2017 Devhouse Spindle. All rights reserved.
 //
-
+#import "VialerSIPLib.h"
 @class VSLCall;
 
 /**
@@ -22,6 +22,10 @@ extern NSString * _Nonnull const VSLCallStatsTotalMBsUsed;
 
 @interface VSLCallStats : NSObject
 
+@property (nonatomic) pjsua_stream_info streamInfo;
+
+@property (nonatomic) pjsua_stream_stat streamStat;
+
 /**
  *  Make the init unavailable.
  *
@@ -39,8 +43,8 @@ extern NSString * _Nonnull const VSLCallStatsTotalMBsUsed;
 - (instancetype _Nullable)initWithCall:(VSLCall * _Nonnull)call NS_DESIGNATED_INITIALIZER;
 
 /**
- * Generate the call status 
- * 
+ * Generate the call status
+ *
  * @return NSDictionary with following format:
  * @{
  *  VSLCallStatsMOS: NSNumber,

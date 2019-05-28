@@ -8,7 +8,6 @@
 #import "NSString+PJString.h"
 #import "VSLCall.h"
 #import "VSLLogging.h"
-#import "VialerSIPLib.h"
 
 static NSString * const VSLCallStatsCodecImpairments = @"CodecImpairment";
 static NSString * const VSLCallStatsBPL = @"BPL";
@@ -128,9 +127,6 @@ NSString * const VSLCallStatsTotalMBsUsed = @"VSLCallStatsTotalMBsUsed";
 
 @property (nonatomic) float No;
 
-@property (nonatomic) pjsua_stream_info streamInfo;
-
-@property (nonatomic) pjsua_stream_stat streamStat;
 @end
 
 @implementation VSLCallStats
